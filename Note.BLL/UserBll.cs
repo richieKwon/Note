@@ -7,8 +7,12 @@ namespace Note.BLL
 {
     public class UserBll
     {
-        private IUserDal _userDal;
-        
+        private readonly IUserDal _userDal;
+
+        public UserBll(IUserDal userDal)
+        {
+            _userDal = userDal;
+        }
         public List<User> GetUserList()
         {
             throw new NotImplementedException();
